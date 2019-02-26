@@ -1,0 +1,7 @@
+mixin applicationsTableItem(name, type, releaseDate, author)
+    div(class="block-table__item block-table__item--big")
+        span(class="block-table__text block-table__text--padding block-table__text--blue")=name
+        span(class="block-table__text block-table__text--padding")= type
+        span(class="block-table__text block-table__text--padding")= releaseDate
+        span(class="block-table__text block-table__text--padding")= author
+        include ../applicationsTableControls.pug/index.pug

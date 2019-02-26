@@ -1,0 +1,15 @@
+form(class="main-page__block-form block-form")
+    label.email-label(for="email") Email
+    br
+    input#email(class="block-form__input block-form__input--long" type="email", name="email", placeholder='someone@example.com')
+    fieldset.block-form__fieldset
+        .block-form__wrapper
+            label(for="phone") Phone number
+            br
+            input#phone(class="block-form__input block-form__input--short" type="tel" name="phone")
+        .block-form__wrapper
+            label(for="birthday") Date of birth
+            br
+            input#birthday(class="block-form__input block-form__input--short" type="date" name="birthday")
+    include ../common/buttons/submit-button.pug
+    

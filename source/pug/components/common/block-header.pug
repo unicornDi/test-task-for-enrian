@@ -1,0 +1,7 @@
+mixin blockHeader(name)
+    header.main-page__block-header
+        .block-header__wrapper
+            svg(class="svg-ellipse" xmlns="http://www.w3.org/2000/svg")
+                use(xlink:href="#ellipse")
+            h6.block-header__title= name
+        include ./buttons/add-button.pug

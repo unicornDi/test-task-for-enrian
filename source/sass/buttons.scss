@@ -1,0 +1,29 @@
+.common-button {
+    @include button-style;
+    width: 120px;
+    height: 42px;
+}
+
+.add-project-button {
+    background: $add-project-button;
+    color: $white;
+}
+
+.edit-project-button {
+    @include button-style;
+    border: 2px solid $border-grey;
+    background: $white;
+}
+
+.submit-button {
+    width: 130px;
+    height: 40px;
+    margin-top: 20px;
+    background: $submit-button;
+    color: $white;
+}
+
+.add-button {
+    margin-right: 30px;
+    border: 2px solid $border-grey;
+}

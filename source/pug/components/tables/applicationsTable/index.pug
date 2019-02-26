@@ -1,0 +1,17 @@
+- var applications= [{name: "name1", type: "application", releaseDate: "2018", author: "author1"}, {name: "name2", type: "game", releaseDate: "2018", author: "author2"}, {name: "name3", type: "game", releaseDate: "2018", author: "author3"}, {name: "name4", type: "game", releaseDate: "2019", author: "author4"}, {name: "name5", type: "application", releaseDate: "2019", author: "author5"}, {name: "name6", type: "game", releaseDate: "2019", author: "author6"} ];
+include ./applications-table-item.pug
+
+.block-table
+    div(class="block-table__item block-table__header block-table__item--big")
+        span(class="block-table__text block-table__text--padding") Heading
+        span(class="block-table__text block-table__text--padding") Heading
+        span(class="block-table__text block-table__text--padding") Heading
+        span(class="block-table__text block-table__text--padding") Heading
+
+    each application in applications
+        +applicationsTableItem(
+            application.name,
+            application.type,
+            application.releaseDate,
+            application.author
+        )

@@ -1,0 +1,32 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5em;
+    height: calc(480px / 5.5);
+
+    .pagination-button {
+        @include button-style;
+        margin: 0 50px;
+        cursor: pointer;
+
+        .svg-arrow-button {
+            width: 32px;
+            height: 32px;
+            fill: none;
+        }
+
+        .svg-arrow-button--right {
+            transform: rotate(180deg);
+        }
+    }
+
+    .pagination__link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .pagination__link:hover {
+        color: $light-blue;
+    }
+}

@@ -1,0 +1,10 @@
+- var people= [{name: "Name1", role: "Frontend designer"}, {name:"Name2", role:"Project lead"}, {name:"Name3", role:"Java developer"}, {name:"Name4", role:"Java developer"}];
+include ./peopleTablePerson.pug
+
+.block-table
+    div(class="block-table__item block-table__header")
+        span.block-table__text Full name
+        span Role
+    each person in people
+        +peopleTablePerson(person.name, person.role)
+        

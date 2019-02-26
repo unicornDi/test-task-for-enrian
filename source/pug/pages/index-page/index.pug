@@ -1,0 +1,29 @@
+include ../../components/common/block-header.pug
+include ../../svg/svg-sprite.pug
+
+doctype html
+html(lang="en")
+    link(rel='stylesheet', href='css/style.css', type='text/css')
+    head
+        title Test Page
+    body
+        include ../../components/header/index.pug
+
+        main(class="main-page")
+            include ../../components/navigation/navigation.pug
+            div(class="main-page__wrapper")
+                header(class="main-page__header")
+                    include ../../components/common/main-page-title.pug
+                    .wrapper
+                        include ../../components/common/buttons/edit-project-button.pug
+                        include ../../components/common/buttons/add-project-button.pug
+                section(class="main-page__block main-page__block--small")
+                    +blockHeader ('Project info')
+                    include ../../components/form/index.pug
+                section(class="main-page__block main-page__block--small")
+                    +blockHeader ('People')
+                    include ../../components/tables/peopleTable/people-table.pug
+                section(class="main-page__block main-page__block--big")
+                    +blockHeader ('Applications')
+                    include ../../components/tables/applicationsTable/index.pug
+                    include ../../components/pagination.pug
